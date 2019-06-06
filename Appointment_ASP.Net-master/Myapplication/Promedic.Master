@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Promedic.master.cs" Inherits="Myapplication.Promedic" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="masterHeadCPH" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h2>
+                <img alt="logo" class="auto-style1" src="images/Logo.png" /></h2>
+            <br />
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Appointment.aspx" Text="Appointment" Value="Appointment">
+                        <asp:MenuItem Text="New Appointment" Value="New Appointment"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/UserRegistration.aspx" Text="User Account" Value="User Account"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Consultation.aspx" Text="Consultation" Value="Consultation"></asp:MenuItem>
+                    <asp:MenuItem Text="Diagnostic" Value="Diagnostic" NavigateUrl="~/Diagnostic.aspx"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:ContentPlaceHolder ID="masterBodyCPH" runat="server">
+               
+                <br />
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
